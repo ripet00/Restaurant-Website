@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+     <!-- frameworks font-awesome -->
+     <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+   />
+   <!-- frameworks -->
+   <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+   />
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="menu">
+        <!-- title-->
+        <div class="title">
+            <h2 class="animate__animated animated__bounce">
+                Our Menu
+            </h2>
+        </div>
+
+        <!--filter buttons-->
+        <div class="btn-container">
+            <button type="button" class="filter-btn" data-id="all">all</button>
+            <button type="button" class="filter-btn" data-id="breakfast">breakfast</button>
+            <button type="button" class="filter-btn" data-id="lunch">lunch</button>
+            <button type="button" class="filter-btn" data-id="shakes">shakes</button>
+        </div>
+        
+        <!--menu items-->
+        <div class="section-center">
+            <!--Single item-->
+            <article class="menu-item">
+                <img src="images/menu-item.jpeg" alt="menu item" class="photo">
+                <div class="item-info">
+                    <header>
+                        <h4>buttermilk pancakes</h4>
+                        <h4 class="price">$15</h4>
+                    </header>
+                    <p class="item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam cupiditate.
+                    </p>
+                </div>
+            </article>
+            <!--end of single item-->
+
+            <!--Single item-->
+            <article class="menu-item">
+                <img src="images/item-2.jpeg" alt="menu item" class="photo">
+                <div class="item-info">
+                    <header>
+                        <h4>burger & fried potatos</h4>
+                        <h4 class="price">$20</h4>
+                    </header>
+                    <p class="item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam cupiditate.
+                    </p>
+                </div>
+            </article>
+            <!--end of single item-->
+
+            <!--Single item-->
+            <article class="menu-item">
+                <img src="images/item-6.jpeg" alt="menu item" class="photo">
+                <div class="item-info">
+                    <header>
+                        <h4>choclate</h4>
+                        <h4 class="price">$13</h4>
+                    </header>
+                    <p class="item-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam cupiditate.
+                    </p>
+                </div>
+            </article>
+            <!--end of single item-->
+        </div>
+
+    </section>
+
+    <!--2nd section for user reviews-->
+    <section class="container">
+        <!--title-->
+        <div class="title">
+            <h2>Our Reviews</h2>
+            <div class="underline"></div>
+        </div>
+        <article class="review">
+            <div class="img-container">
+                <img src="images/person-1.jpeg" id="person-img" alt="">
+            </div>
+            <h4 id="author">Sara Jones</h4>
+            <p id="job">UX designer</p>
+            <p id="info">Lorem ipsum</p>
+            <!--prev next button-->
+            <div class="button-container">
+                <button class="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <!--random button-->
+            <button class="random-btn">Suprise Me</button>
+        </article>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
