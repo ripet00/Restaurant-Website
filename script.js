@@ -74,7 +74,24 @@ const menu = [
         desc: 'Eat me I am very delicious, the sweet taste is unforgotten'
     },
     
-]
+];
+
+const reviews = [
+    {
+        id: 1,
+        name: "Song Hay",
+        job: "Programmer",
+        img: "https://id.pinterest.com/pin/112941903149799915/",
+        text: "All their food were taste good, I like it",
+    },
+    {
+        id: 2,
+        name: "Lunartic",
+        job: "Programmer",
+        img: "https://id.pinterest.com/pin/3166662228800116/",
+        text: "This is the best restaurant I ever come, hope everyone could taste all the food",
+    },
+];
 
 // get parent element
 const sectionCenter = document.querySelector(".section-center");
@@ -90,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function() {
 function displayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function (item) {
         return` <article class = "menu-item">
-        <img src=${item.img} alt=${item.title} class="photo" />
+            <img src=${item.img} alt=${item.title} class="photo" />
             <div class="item-info">
                 <header>
                     <h4>${item.title}</h4>
@@ -146,22 +163,7 @@ function displayMenuButtons() {
     });
 }
 
-const reviews = [
-    {
-        id: 1,
-        name: "Song Hay",
-        job: "Programmer",
-        img: "https://id.pinterest.com/pin/112941903149799915/",
-        text: "All their food were taste good, I like it",
-    },
-    {
-        id: 2,
-        name: "Lunartic",
-        job: "Programmer",
-        img: "https://id.pinterest.com/pin/3166662228800116/",
-        text: "This is the best restaurant I ever come, hope everyone could taste all the food",
-    },
-]
+
 
 // select items
 const img = document.getElementById("person-img");
@@ -169,9 +171,9 @@ const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
-const prevBtn = document.getElementById(".prev-btn");
-const nextBtn = document.getElementById(".next-btn");
-const randomBtn = document.getElementById(".random-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
 
 // set starting item
 let currentItem = 0;
@@ -184,6 +186,15 @@ window.addEventListener("DOMContentLoaded", function() {
     job.textContent = item.job;
     info.textContent = item.text;
 });
+
+// show person based on item
+function showPerson(person) {
+    const item = reviews[person];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+  }
 
 // show next person
 nextBtn.addEventListener("click",function() {
